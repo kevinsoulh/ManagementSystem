@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-md {
+    margin-top: 30px;
+}
+
+.card-header h3 {
+    text-align: center;
+}
+
+.create-btn button {
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 0 auto;
+    width: 0 auto;
+}
+
+.flex-box img {
+    height: 10vh;
+}
+
+.text-uppercase {text-transform: uppercase !important;}
+.text-lowercase {text-transform: lowercase !important;}
+.text-capitalize {text-transform: capitalize !important;}
