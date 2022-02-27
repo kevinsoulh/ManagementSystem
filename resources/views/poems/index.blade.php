@@ -3,6 +3,12 @@
 @section('title', 'Poems')
 
 @section('css')
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('trumbowyg/dist/ui/trumbowyg.min.css') }}">
+<link rel="stylesheet" href="{{ asset('trumbowyg/dist/ui/icons.svg') }}">
+<link rel="stylesheet" href="{{ asset('trumbowyg/dist/plugins/emoji/ui/trumbowyg.emoji.min.css') }}">
 @endsection
 
 @section('content')
@@ -43,8 +49,8 @@
             <table class="table table-bordered table-striped table-hover">
                 @forelse($poems as $key => $dados)
                 <tr>
-                    <th>{{ Str::limit($dados->titulo, 35) ?? 'Não Encontrado' }}</th>
-                    <td>{!! Str::limit($dados->conteudo, 35) ?? 'Não Encontrado' !!}</td>
+                    <th>{{ Str::limit($dados->titulo, 25) ?? 'Não Encontrado' }}</th>
+                    <td>{!! Str::limit($dados->conteudo, 25) ?? 'Não Encontrado' !!}</td>
                     <td>
                         <a href="{{ action('PoemController@edit', $dados->id) }}" class="btn btn-sm btn-primary">Editar</a>
                         <a href="{{ action('PoemController@show', $dados->id) }}" class="btn btn-sm btn-primary">Visualizar</a>
