@@ -25,8 +25,13 @@
                     <div class="card-body">
                         <div class="card flex-box">
                             <div class="card-body">
-                                <h3 class="card-title pb-2" style="text-align: center;">{{ $poems->titulo ?? 'Não Encontrado'}}</h3>
-                                <p class="card-text">{!! $poems->conteudo ?? 'Não Encontrado' !!}</p>
+                                <div>
+                                    <h3 class="card-title pb-2" style="text-align: center;">{{ $poems->titulo ?? 'Não Encontrado'}}</h3>
+                                </div>
+                                <hr>
+                                <div>
+                                    <p class="card-text">{!! $poems->conteudo ?? 'Não Encontrado' !!}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
