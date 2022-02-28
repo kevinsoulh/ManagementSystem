@@ -41,32 +41,6 @@ class PoemController extends Controller
 
         $data = $request->all();
 
-        // foreach($data as $key => $value){
-        //     if(is_array($value) || is_object($value)){
-        //         foreach($value as $key_2 => $value_2){
-        //             if(is_array($value) || is_object($value)){
-        //                 foreach($value_2 as $key_3 => $value_3){
-        //                     if(strlen($value_3) > 1){
-        //                         $data[$key][$key_2][$key_3] = strtoupper($value_3);
-        //                         if(strlen($value_3, ',') !== false && strpos($value_3, '.') !== false) $data[$key][$key_2][$key_3] = str_replace(',', '', $data[$key][$key_2][$key_3]);
-        //                     }
-        //                 }
-        //             }else{
-        //                 if(strlen($value_2) > 1){
-        //                     $data[$key][$key_2] = strtoupper($value_2);
-        //                     if(strpos($value_2, ',') !== false && strpos($value_2, '.') !== false) $data[$key][$key_2] = str_replace(',', '', $data[$key][$key_2]);
-        //                 }
-        //             }
-        //         }
-        //     }else{
-        //         if(strlen($value) > 1){
-        //             $data[$key] = strtoupper($value);
-        //             if(strpos($value, ',') !== false && strpos($value, '.') !== false) $data[$key] = str_replace(',', '', $data[$key]);
-        //         }
-        //     }
-        // }
-        // $request->merge($data);
-
         $resultado = Poems::create($data);
 
         if(!$resultado){
@@ -116,32 +90,6 @@ class PoemController extends Controller
         $validatedData = $request->validate(Poems::$rules_u);
 
         $data = $request->all();
-
-        // foreach($data as $key => $value){
-        //     if(is_array($value) || is_object($value)){
-        //         foreach($value as $key_2 => $value_2){
-        //             if(is_array($value) || is_object($value)){
-        //                 foreach($value_2 as $key_3 => $value_3){
-        //                     if(strlen($value_3) > 1){
-        //                         $data[$key][$key_2][$key_3] = strtoupper($value_3);
-        //                         if(strlen($value_3, ',') !== false && strpos($value_3, '.') !== false) $data[$key][$key_2][$key_3] = str_replace(',', '', $data[$key][$key_2][$key_3]);
-        //                     }
-        //                 }
-        //             }else{
-        //                 if(strlen($value_2) > 1){
-        //                     $data[$key][$key_2] = strtoupper($value_2);
-        //                     if(strpos($value_2, ',') !== false && strpos($value_2, '.') !== false) $data[$key][$key_2] = str_replace(',', '', $data[$key][$key_2]);
-        //                 }
-        //             }
-        //         }
-        //     }else{
-        //         if(strlen($value) > 1){
-        //             $data[$key] = strtoupper($value);
-        //             if(strpos($value, ',') !== false && strpos($value, '.') !== false) $data[$key] = str_replace(',', '', $data[$key]);
-        //         }
-        //     }
-        // }
-        // $request->merge($data);
 
         $resultado = $poems->update($data);
 
